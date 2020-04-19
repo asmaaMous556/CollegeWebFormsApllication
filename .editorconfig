@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# CA2000: Dispose objects before losing scope
+dotnet_diagnostic.CA2000.severity = silent
+
+# CA1303: Do not pass literals as localized parameters
+dotnet_diagnostic.CA1303.severity = silent
+
+# CS0628: New protected member declared in sealed class
+dotnet_diagnostic.CS0628.severity = none

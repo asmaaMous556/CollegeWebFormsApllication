@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeWebFormApp", "CollegeWebFormApp\CollegeWebFormApp.csproj", "{352141D1-9A5A-4C76-92E1-A3C6505A8BA0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{774F91BB-A746-43D0-AD40-828283A35158}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{352141D1-9A5A-4C76-92E1-A3C6505A8BA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352141D1-9A5A-4C76-92E1-A3C6505A8BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352141D1-9A5A-4C76-92E1-A3C6505A8BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352141D1-9A5A-4C76-92E1-A3C6505A8BA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B925340-CE6A-45AB-A4DE-472C2BCC1669}
+	EndGlobalSection
+EndGlobal

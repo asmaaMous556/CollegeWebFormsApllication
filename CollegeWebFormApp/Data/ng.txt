@@ -1,0 +1,5 @@
+New App >> ng new NewNameOfApp 
+yes or no fo routing
+choose Style Like Css , Scss , Less
+-----------------------------------------
+git config --global user.email "asmaamosmoh@gmail.com"

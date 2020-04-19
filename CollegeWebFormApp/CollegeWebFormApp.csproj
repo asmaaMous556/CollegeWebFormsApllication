@@ -1,0 +1,1064 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{352141D1-9A5A-4C76-92E1-A3C6505A8BA0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CollegeWebFormApp</RootNamespace>
+    <AssemblyName>CollegeWebFormApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.7</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices.Auth, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.8\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddAssigmentPage.aspx" />
+    <Content Include="AddGroupCoor.aspx" />
+    <Content Include="AssigmentPageStudent.aspx" />
+    <Content Include="assignWorkForm.aspx" />
+    <Content Include="AssignWorkSupervisor.aspx" />
+    <Content Include="BrowseFile.aspx" />
+    <Content Include="CommitteeEvaluation.aspx" />
+    <Content Include="CommitteeEvaluationPage.aspx" />
+    <Content Include="CommitteeEvaluationV2.aspx" />
+    <Content Include="CommitteEvaluationInCoor.aspx" />
+    <Content Include="ContactPage.aspx" />
+    <Content Include="CoordinatorManageTransaction.aspx" />
+    <Content Include="CurrentProjectsPage.aspx" />
+    <Content Include="DetailsOfCurrentProject.aspx" />
+    <Content Include="EvaluateResults.aspx" />
+    <Content Include="EvaluationSupervisorPage.aspx" />
+    <Content Include="FillRegisteration.aspx" />
+    <Content Include="GuidelinesCoordinator.aspx" />
+    <Content Include="IdeaPresentationPage.aspx" />
+    <Content Include="IdeaPresentationPageCoor.aspx" />
+    <Content Include="ideaSelection.aspx" />
+    <Content Include="IncomingTransactionPageForsuper.aspx" />
+    <Content Include="LoginPageSupervisor.aspx" />
+    <Content Include="logo\WhatsApp Image 2020-04-07 at 9.31.13 AM.jpeg" />
+    <Content Include="MainOutComingTranCoor.aspx" />
+    <Content Include="ManageFilesCoordinator.aspx" />
+    <Content Include="ManageFilesPage.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="CoordinatorHomePage.aspx" />
+    <Content Include="CoordinatorLoginPage.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="ManageSeniorProjects.aspx" />
+    <Content Include="ManageTransactionPageCommittee.aspx" />
+    <Content Include="ManageTransactionPageCoordinator.aspx" />
+    <Content Include="ManageTransactionPageForSup.aspx" />
+    <Content Include="ManageTransactionSupervisor.aspx" />
+    <Content Include="NewComingTransaction.aspx" />
+    <Content Include="OutComingTransactionCoor.aspx" />
+    <Content Include="PreviousProject.aspx" />
+    <Content Include="ProposedIdeaCoordinator.aspx" />
+    <Content Include="Repository.aspx" />
+    <Content Include="StudentGuidelines.aspx" />
+    <Content Include="StudentLoginPage.aspx" />
+    <Content Include="StudentManageTransaction.aspx" />
+    <Content Include="RegisterPageSupervisor.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\index.js.flow" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </Content>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\src\index.js" />
+    <Content Include="Scripts\src\methods\defaults.js" />
+    <Content Include="Scripts\src\methods\destroy.js" />
+    <Content Include="Scripts\src\methods\disableEventListeners.js" />
+    <Content Include="Scripts\src\methods\enableEventListeners.js" />
+    <Content Include="Scripts\src\methods\placements.js" />
+    <Content Include="Scripts\src\methods\update.js" />
+    <Content Include="Scripts\src\modifiers\applyStyle.js" />
+    <Content Include="Scripts\src\modifiers\arrow.js" />
+    <Content Include="Scripts\src\modifiers\computeStyle.js" />
+    <Content Include="Scripts\src\modifiers\flip.js" />
+    <Content Include="Scripts\src\modifiers\hide.js" />
+    <Content Include="Scripts\src\modifiers\index.js" />
+    <Content Include="Scripts\src\modifiers\inner.js" />
+    <Content Include="Scripts\src\modifiers\keepTogether.js" />
+    <Content Include="Scripts\src\modifiers\offset.js" />
+    <Content Include="Scripts\src\modifiers\preventOverflow.js" />
+    <Content Include="Scripts\src\modifiers\shift.js" />
+    <Content Include="Scripts\src\utils\clockwise.js" />
+    <Content Include="Scripts\src\utils\computeAutoPlacement.js" />
+    <Content Include="Scripts\src\utils\debounce.js" />
+    <Content Include="Scripts\src\utils\find.js" />
+    <Content Include="Scripts\src\utils\findCommonOffsetParent.js" />
+    <Content Include="Scripts\src\utils\findIndex.js" />
+    <Content Include="Scripts\src\utils\getBordersSize.js" />
+    <Content Include="Scripts\src\utils\getBoundaries.js" />
+    <Content Include="Scripts\src\utils\getBoundingClientRect.js" />
+    <Content Include="Scripts\src\utils\getClientRect.js" />
+    <Content Include="Scripts\src\utils\getFixedPositionOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetRect.js" />
+    <Content Include="Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getOppositePlacement.js" />
+    <Content Include="Scripts\src\utils\getOppositeVariation.js" />
+    <Content Include="Scripts\src\utils\getOuterSizes.js" />
+    <Content Include="Scripts\src\utils\getParentNode.js" />
+    <Content Include="Scripts\src\utils\getPopperOffsets.js" />
+    <Content Include="Scripts\src\utils\getReferenceNode.js" />
+    <Content Include="Scripts\src\utils\getReferenceOffsets.js" />
+    <Content Include="Scripts\src\utils\getRoot.js" />
+    <Content Include="Scripts\src\utils\getRoundedOffsets.js" />
+    <Content Include="Scripts\src\utils\getScroll.js" />
+    <Content Include="Scripts\src\utils\getScrollParent.js" />
+    <Content Include="Scripts\src\utils\getStyleComputedProperty.js" />
+    <Content Include="Scripts\src\utils\getSupportedPropertyName.js" />
+    <Content Include="Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getWindow.js" />
+    <Content Include="Scripts\src\utils\getWindowSizes.js" />
+    <Content Include="Scripts\src\utils\includeScroll.js" />
+    <Content Include="Scripts\src\utils\index.js" />
+    <Content Include="Scripts\src\utils\isBrowser.js" />
+    <Content Include="Scripts\src\utils\isFixed.js" />
+    <Content Include="Scripts\src\utils\isFunction.js" />
+    <Content Include="Scripts\src\utils\isIE.js" />
+    <Content Include="Scripts\src\utils\isModifierEnabled.js" />
+    <Content Include="Scripts\src\utils\isModifierRequired.js" />
+    <Content Include="Scripts\src\utils\isNumeric.js" />
+    <Content Include="Scripts\src\utils\isOffsetContainer.js" />
+    <Content Include="Scripts\src\utils\removeEventListeners.js" />
+    <Content Include="Scripts\src\utils\runModifiers.js" />
+    <Content Include="Scripts\src\utils\setAttributes.js" />
+    <Content Include="Scripts\src\utils\setStyles.js" />
+    <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="HomePage.aspx" />
+    <Content Include="RegisterationPageStudent.aspx" />
+    <Content Include="StudentHomePage.aspx" />
+    <Content Include="CoordinatorCalenderEvent.aspx" />
+    <Content Include="StudentProposedIdea.aspx" />
+    <Content Include="StudentTemplates.aspx" />
+    <Content Include="StudentViewEvent.aspx" />
+    <Content Include="SubmitAssigmentStudent.aspx" />
+    <Content Include="SuperEvaluationInCoor.aspx" />
+    <Content Include="SupervisorEvaluateCOIT408.aspx" />
+    <Content Include="SupervisorEvaluation449.aspx" />
+    <Content Include="SupervisorEvaluationOthers.aspx" />
+    <Content Include="SupervisorHomePage.aspx" />
+    <Content Include="TemplatesCoordinator.aspx" />
+    <Content Include="ViewAssigmentStudent.aspx" />
+    <Content Include="ViewAssigmentSupervisor.aspx" />
+    <Content Include="ViewOutComigTransactionPage.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAssigmentPage.aspx.cs">
+      <DependentUpon>AddAssigmentPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddAssigmentPage.aspx.designer.cs">
+      <DependentUpon>AddAssigmentPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddGroupCoor.aspx.cs">
+      <DependentUpon>AddGroupCoor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddGroupCoor.aspx.designer.cs">
+      <DependentUpon>AddGroupCoor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssigmentPageStudent.aspx.cs">
+      <DependentUpon>AssigmentPageStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssigmentPageStudent.aspx.designer.cs">
+      <DependentUpon>AssigmentPageStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="assignWorkForm.aspx.cs">
+      <DependentUpon>assignWorkForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="assignWorkForm.aspx.designer.cs">
+      <DependentUpon>assignWorkForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssignWorkSupervisor.aspx.cs">
+      <DependentUpon>AssignWorkSupervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignWorkSupervisor.aspx.designer.cs">
+      <DependentUpon>AssignWorkSupervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseFile.aspx.cs">
+      <DependentUpon>BrowseFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BrowseFile.aspx.designer.cs">
+      <DependentUpon>BrowseFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommitteeEvaluation.aspx.cs">
+      <DependentUpon>CommitteeEvaluation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommitteeEvaluation.aspx.designer.cs">
+      <DependentUpon>CommitteeEvaluation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommitteeEvaluationPage.aspx.cs">
+      <DependentUpon>CommitteeEvaluationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommitteeEvaluationPage.aspx.designer.cs">
+      <DependentUpon>CommitteeEvaluationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommitteeEvaluationV2.aspx.cs">
+      <DependentUpon>CommitteeEvaluationV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommitteeEvaluationV2.aspx.designer.cs">
+      <DependentUpon>CommitteeEvaluationV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommitteEvaluationInCoor.aspx.cs">
+      <DependentUpon>CommitteEvaluationInCoor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommitteEvaluationInCoor.aspx.designer.cs">
+      <DependentUpon>CommitteEvaluationInCoor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactPage.aspx.cs">
+      <DependentUpon>ContactPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactPage.aspx.designer.cs">
+      <DependentUpon>ContactPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorManageTransaction.aspx.cs">
+      <DependentUpon>CoordinatorManageTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoordinatorManageTransaction.aspx.designer.cs">
+      <DependentUpon>CoordinatorManageTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentProjectsPage.aspx.cs">
+      <DependentUpon>CurrentProjectsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CurrentProjectsPage.aspx.designer.cs">
+      <DependentUpon>CurrentProjectsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsOfCurrentProject.aspx.cs">
+      <DependentUpon>DetailsOfCurrentProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailsOfCurrentProject.aspx.designer.cs">
+      <DependentUpon>DetailsOfCurrentProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EvaluateResults.aspx.cs">
+      <DependentUpon>EvaluateResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EvaluateResults.aspx.designer.cs">
+      <DependentUpon>EvaluateResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EvaluationSupervisorPage.aspx.cs">
+      <DependentUpon>EvaluationSupervisorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EvaluationSupervisorPage.aspx.designer.cs">
+      <DependentUpon>EvaluationSupervisorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FillRegisteration.aspx.cs">
+      <DependentUpon>FillRegisteration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FillRegisteration.aspx.designer.cs">
+      <DependentUpon>FillRegisteration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GuidelinesCoordinator.aspx.cs">
+      <DependentUpon>GuidelinesCoordinator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuidelinesCoordinator.aspx.designer.cs">
+      <DependentUpon>GuidelinesCoordinator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IdeaPresentationPage.aspx.cs">
+      <DependentUpon>IdeaPresentationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IdeaPresentationPage.aspx.designer.cs">
+      <DependentUpon>IdeaPresentationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IdeaPresentationPageCoor.aspx.cs">
+      <DependentUpon>IdeaPresentationPageCoor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IdeaPresentationPageCoor.aspx.designer.cs">
+      <DependentUpon>IdeaPresentationPageCoor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ideaSelection.aspx.cs">
+      <DependentUpon>ideaSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ideaSelection.aspx.designer.cs">
+      <DependentUpon>ideaSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncomingTransactionPageForsuper.aspx.cs">
+      <DependentUpon>IncomingTransactionPageForsuper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncomingTransactionPageForsuper.aspx.designer.cs">
+      <DependentUpon>IncomingTransactionPageForsuper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPageSupervisor.aspx.cs">
+      <DependentUpon>LoginPageSupervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPageSupervisor.aspx.designer.cs">
+      <DependentUpon>LoginPageSupervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainOutComingTranCoor.aspx.cs">
+      <DependentUpon>MainOutComingTranCoor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainOutComingTranCoor.aspx.designer.cs">
+      <DependentUpon>MainOutComingTranCoor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageFilesCoordinator.aspx.cs">
+      <DependentUpon>ManageFilesCoordinator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageFilesCoordinator.aspx.designer.cs">
+      <DependentUpon>ManageFilesCoordinator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageFilesPage.aspx.cs">
+      <DependentUpon>ManageFilesPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageFilesPage.aspx.designer.cs">
+      <DependentUpon>ManageFilesPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorHomePage.aspx.cs">
+      <DependentUpon>CoordinatorHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoordinatorHomePage.aspx.designer.cs">
+      <DependentUpon>CoordinatorHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorLoginPage.aspx.cs">
+      <DependentUpon>CoordinatorLoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoordinatorLoginPage.aspx.designer.cs">
+      <DependentUpon>CoordinatorLoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSeniorProjects.aspx.cs">
+      <DependentUpon>ManageSeniorProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageSeniorProjects.aspx.designer.cs">
+      <DependentUpon>ManageSeniorProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTransactionPageCommittee.aspx.cs">
+      <DependentUpon>ManageTransactionPageCommittee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageTransactionPageCommittee.aspx.designer.cs">
+      <DependentUpon>ManageTransactionPageCommittee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTransactionPageCoordinator.aspx.cs">
+      <DependentUpon>ManageTransactionPageCoordinator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageTransactionPageCoordinator.aspx.designer.cs">
+      <DependentUpon>ManageTransactionPageCoordinator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTransactionPageForSup.aspx.cs">
+      <DependentUpon>ManageTransactionPageForSup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageTransactionPageForSup.aspx.designer.cs">
+      <DependentUpon>ManageTransactionPageForSup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTransactionSupervisor.aspx.cs">
+      <DependentUpon>ManageTransactionSupervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageTransactionSupervisor.aspx.designer.cs">
+      <DependentUpon>ManageTransactionSupervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003060915493_updatesOne.cs" />
+    <Compile Include="Migrations\202003060915493_updatesOne.designer.cs">
+      <DependentUpon>202003060915493_updatesOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003070900439_updates1.cs" />
+    <Compile Include="Migrations\202003070900439_updates1.designer.cs">
+      <DependentUpon>202003070900439_updates1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003071956242_updates2.cs" />
+    <Compile Include="Migrations\202003071956242_updates2.designer.cs">
+      <DependentUpon>202003071956242_updates2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003081957577_updat34.cs" />
+    <Compile Include="Migrations\202003081957577_updat34.designer.cs">
+      <DependentUpon>202003081957577_updat34.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003171738554_updatesfinal.cs" />
+    <Compile Include="Migrations\202003171738554_updatesfinal.designer.cs">
+      <DependentUpon>202003171738554_updatesfinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003171745282_updates3.cs" />
+    <Compile Include="Migrations\202003171745282_updates3.designer.cs">
+      <DependentUpon>202003171745282_updates3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003190953156_FINAL.cs" />
+    <Compile Include="Migrations\202003190953156_FINAL.designer.cs">
+      <DependentUpon>202003190953156_FINAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003221527201_saveFiles.cs" />
+    <Compile Include="Migrations\202003221527201_saveFiles.designer.cs">
+      <DependentUpon>202003221527201_saveFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003221530419_InalSaveFile.cs" />
+    <Compile Include="Migrations\202003221530419_InalSaveFile.designer.cs">
+      <DependentUpon>202003221530419_InalSaveFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003221741161_upladedFies.cs" />
+    <Compile Include="Migrations\202003221741161_upladedFies.designer.cs">
+      <DependentUpon>202003221741161_upladedFies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003221752099_FinaFileUpload.cs" />
+    <Compile Include="Migrations\202003221752099_FinaFileUpload.designer.cs">
+      <DependentUpon>202003221752099_FinaFileUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003221756192_removeDesription.cs" />
+    <Compile Include="Migrations\202003221756192_removeDesription.designer.cs">
+      <DependentUpon>202003221756192_removeDesription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003222148489_AddDate.cs" />
+    <Compile Include="Migrations\202003222148489_AddDate.designer.cs">
+      <DependentUpon>202003222148489_AddDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003231856402_TaskUpdate.cs" />
+    <Compile Include="Migrations\202003231856402_TaskUpdate.designer.cs">
+      <DependentUpon>202003231856402_TaskUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003231900498_task2Updates.cs" />
+    <Compile Include="Migrations\202003231900498_task2Updates.designer.cs">
+      <DependentUpon>202003231900498_task2Updates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003231926410_Task3Update.cs" />
+    <Compile Include="Migrations\202003231926410_Task3Update.designer.cs">
+      <DependentUpon>202003231926410_Task3Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003240955526_Tas4Update.cs" />
+    <Compile Include="Migrations\202003240955526_Tas4Update.designer.cs">
+      <DependentUpon>202003240955526_Tas4Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003240959485_Task5Update.cs" />
+    <Compile Include="Migrations\202003240959485_Task5Update.designer.cs">
+      <DependentUpon>202003240959485_Task5Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003270825209_currentProjectUpdate.cs" />
+    <Compile Include="Migrations\202003270825209_currentProjectUpdate.designer.cs">
+      <DependentUpon>202003270825209_currentProjectUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003281949427_dropcol.cs" />
+    <Compile Include="Migrations\202003281949427_dropcol.designer.cs">
+      <DependentUpon>202003281949427_dropcol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003311815492_ideaTable.cs" />
+    <Compile Include="Migrations\202003311815492_ideaTable.designer.cs">
+      <DependentUpon>202003311815492_ideaTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004051729002_superEvaluation.cs" />
+    <Compile Include="Migrations\202004051729002_superEvaluation.designer.cs">
+      <DependentUpon>202004051729002_superEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004051846404_updatesForEvaluation.cs" />
+    <Compile Include="Migrations\202004051846404_updatesForEvaluation.designer.cs">
+      <DependentUpon>202004051846404_updatesForEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004060915426_addColumns.cs" />
+    <Compile Include="Migrations\202004060915426_addColumns.designer.cs">
+      <DependentUpon>202004060915426_addColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004061339512_committee.cs" />
+    <Compile Include="Migrations\202004061339512_committee.designer.cs">
+      <DependentUpon>202004061339512_committee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004061349146_commiteeEval.cs" />
+    <Compile Include="Migrations\202004061349146_commiteeEval.designer.cs">
+      <DependentUpon>202004061349146_commiteeEval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004061747011_updatesforCommittee.cs" />
+    <Compile Include="Migrations\202004061747011_updatesforCommittee.designer.cs">
+      <DependentUpon>202004061747011_updatesforCommittee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004061846252_stingToInt.cs" />
+    <Compile Include="Migrations\202004061846252_stingToInt.designer.cs">
+      <DependentUpon>202004061846252_stingToInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004071145220_updateDoubles.cs" />
+    <Compile Include="Migrations\202004071145220_updateDoubles.designer.cs">
+      <DependentUpon>202004071145220_updateDoubles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CommitteEvaluation.cs" />
+    <Compile Include="Models\CommitteTransaction.cs" />
+    <Compile Include="Models\CurrentProject.cs" />
+    <Compile Include="Models\EvaluationTransaction.cs" />
+    <Compile Include="Models\Idea_Presentation.cs" />
+    <Compile Include="Models\keyAttribute.cs" />
+    <Compile Include="Models\SupervisorEvaluation.cs" />
+    <Compile Include="NewComingTransaction.aspx.cs">
+      <DependentUpon>NewComingTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewComingTransaction.aspx.designer.cs">
+      <DependentUpon>NewComingTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OutComingTransactionCoor.aspx.cs">
+      <DependentUpon>OutComingTransactionCoor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutComingTransactionCoor.aspx.designer.cs">
+      <DependentUpon>OutComingTransactionCoor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreviousProject.aspx.cs">
+      <DependentUpon>PreviousProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreviousProject.aspx.designer.cs">
+      <DependentUpon>PreviousProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProposedIdeaCoordinator.aspx.cs">
+      <DependentUpon>ProposedIdeaCoordinator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProposedIdeaCoordinator.aspx.designer.cs">
+      <DependentUpon>ProposedIdeaCoordinator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repository.aspx.cs">
+      <DependentUpon>Repository.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Repository.aspx.designer.cs">
+      <DependentUpon>Repository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentGuidelines.aspx.cs">
+      <DependentUpon>StudentGuidelines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentGuidelines.aspx.designer.cs">
+      <DependentUpon>StudentGuidelines.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentLoginPage.aspx.cs">
+      <DependentUpon>StudentLoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentLoginPage.aspx.designer.cs">
+      <DependentUpon>StudentLoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentManageTransaction.aspx.cs">
+      <DependentUpon>StudentManageTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentManageTransaction.aspx.designer.cs">
+      <DependentUpon>StudentManageTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002272054380_intialDB.cs" />
+    <Compile Include="Migrations\202002272054380_intialDB.Designer.cs">
+      <DependentUpon>202002272054380_intialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002272133186_add fileId.cs" />
+    <Compile Include="Migrations\202002272133186_add fileId.designer.cs">
+      <DependentUpon>202002272133186_add fileId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002272144207_updates.cs" />
+    <Compile Include="Migrations\202002272144207_updates.designer.cs">
+      <DependentUpon>202002272144207_updates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002280946406_update ConnectionString.cs" />
+    <Compile Include="Migrations\202002280946406_update ConnectionString.designer.cs">
+      <DependentUpon>202002280946406_update ConnectionString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002282219024_update student.cs" />
+    <Compile Include="Migrations\202002282219024_update student.designer.cs">
+      <DependentUpon>202002282219024_update student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003031251084_test.cs" />
+    <Compile Include="Migrations\202003031251084_test.designer.cs">
+      <DependentUpon>202003031251084_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003031330088_test2.cs" />
+    <Compile Include="Migrations\202003031330088_test2.designer.cs">
+      <DependentUpon>202003031330088_test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003031729349_event.cs" />
+    <Compile Include="Migrations\202003031729349_event.designer.cs">
+      <DependentUpon>202003031729349_event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CollegeModel.cs" />
+    <Compile Include="Models\Coordinator.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\File.cs" />
+    <Compile Include="Models\FollowUp.cs" />
+    <Compile Include="Models\Repository.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\SupervisionGroup.cs" />
+    <Compile Include="Models\Supervisor.cs" />
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterationPageStudent.aspx.cs">
+      <DependentUpon>RegisterationPageStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterationPageStudent.aspx.designer.cs">
+      <DependentUpon>RegisterationPageStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterPageSupervisor.aspx.cs">
+      <DependentUpon>RegisterPageSupervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterPageSupervisor.aspx.designer.cs">
+      <DependentUpon>RegisterPageSupervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentHomePage.aspx.cs">
+      <DependentUpon>StudentHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentHomePage.aspx.designer.cs">
+      <DependentUpon>StudentHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorCalenderEvent.aspx.cs">
+      <DependentUpon>CoordinatorCalenderEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoordinatorCalenderEvent.aspx.designer.cs">
+      <DependentUpon>CoordinatorCalenderEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentProposedIdea.aspx.cs">
+      <DependentUpon>StudentProposedIdea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentProposedIdea.aspx.designer.cs">
+      <DependentUpon>StudentProposedIdea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentTemplates.aspx.cs">
+      <DependentUpon>StudentTemplates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentTemplates.aspx.designer.cs">
+      <DependentUpon>StudentTemplates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentViewEvent.aspx.cs">
+      <DependentUpon>StudentViewEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentViewEvent.aspx.designer.cs">
+      <DependentUpon>StudentViewEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubmitAssigmentStudent.aspx.cs">
+      <DependentUpon>SubmitAssigmentStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubmitAssigmentStudent.aspx.designer.cs">
+      <DependentUpon>SubmitAssigmentStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuperEvaluationInCoor.aspx.cs">
+      <DependentUpon>SuperEvaluationInCoor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuperEvaluationInCoor.aspx.designer.cs">
+      <DependentUpon>SuperEvaluationInCoor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisorEvaluateCOIT408.aspx.cs">
+      <DependentUpon>SupervisorEvaluateCOIT408.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupervisorEvaluateCOIT408.aspx.designer.cs">
+      <DependentUpon>SupervisorEvaluateCOIT408.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisorEvaluation449.aspx.cs">
+      <DependentUpon>SupervisorEvaluation449.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupervisorEvaluation449.aspx.designer.cs">
+      <DependentUpon>SupervisorEvaluation449.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisorEvaluationOthers.aspx.cs">
+      <DependentUpon>SupervisorEvaluationOthers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupervisorEvaluationOthers.aspx.designer.cs">
+      <DependentUpon>SupervisorEvaluationOthers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisorHomePage.aspx.cs">
+      <DependentUpon>SupervisorHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupervisorHomePage.aspx.designer.cs">
+      <DependentUpon>SupervisorHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplatesCoordinator.aspx.cs">
+      <DependentUpon>TemplatesCoordinator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplatesCoordinator.aspx.designer.cs">
+      <DependentUpon>TemplatesCoordinator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAssigmentStudent.aspx.cs">
+      <DependentUpon>ViewAssigmentStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAssigmentStudent.aspx.designer.cs">
+      <DependentUpon>ViewAssigmentStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAssigmentSupervisor.aspx.cs">
+      <DependentUpon>ViewAssigmentSupervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAssigmentSupervisor.aspx.designer.cs">
+      <DependentUpon>ViewAssigmentSupervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewOutComigTransactionPage.aspx.cs">
+      <DependentUpon>ViewOutComigTransactionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewOutComigTransactionPage.aspx.designer.cs">
+      <DependentUpon>ViewOutComigTransactionPage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper.js.flow" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Data\" />
+    <Folder Include="Guidelines\" />
+    <Folder Include="Ideas\" />
+    <Folder Include="Templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202002272054380_intialDB.resx">
+      <DependentUpon>202002272054380_intialDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002272133186_add fileId.resx">
+      <DependentUpon>202002272133186_add fileId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002272144207_updates.resx">
+      <DependentUpon>202002272144207_updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002280946406_update ConnectionString.resx">
+      <DependentUpon>202002280946406_update ConnectionString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002282219024_update student.resx">
+      <DependentUpon>202002282219024_update student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003031251084_test.resx">
+      <DependentUpon>202003031251084_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003031330088_test2.resx">
+      <DependentUpon>202003031330088_test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003031729349_event.resx">
+      <DependentUpon>202003031729349_event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003060915493_updatesOne.resx">
+      <DependentUpon>202003060915493_updatesOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003070900439_updates1.resx">
+      <DependentUpon>202003070900439_updates1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003071956242_updates2.resx">
+      <DependentUpon>202003071956242_updates2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003081957577_updat34.resx">
+      <DependentUpon>202003081957577_updat34.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003171738554_updatesfinal.resx">
+      <DependentUpon>202003171738554_updatesfinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003171745282_updates3.resx">
+      <DependentUpon>202003171745282_updates3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003190953156_FINAL.resx">
+      <DependentUpon>202003190953156_FINAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003221527201_saveFiles.resx">
+      <DependentUpon>202003221527201_saveFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003221530419_InalSaveFile.resx">
+      <DependentUpon>202003221530419_InalSaveFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003221741161_upladedFies.resx">
+      <DependentUpon>202003221741161_upladedFies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003221752099_FinaFileUpload.resx">
+      <DependentUpon>202003221752099_FinaFileUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003221756192_removeDesription.resx">
+      <DependentUpon>202003221756192_removeDesription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003222148489_AddDate.resx">
+      <DependentUpon>202003222148489_AddDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003231856402_TaskUpdate.resx">
+      <DependentUpon>202003231856402_TaskUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003231900498_task2Updates.resx">
+      <DependentUpon>202003231900498_task2Updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003231926410_Task3Update.resx">
+      <DependentUpon>202003231926410_Task3Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003240955526_Tas4Update.resx">
+      <DependentUpon>202003240955526_Tas4Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003240959485_Task5Update.resx">
+      <DependentUpon>202003240959485_Task5Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003270825209_currentProjectUpdate.resx">
+      <DependentUpon>202003270825209_currentProjectUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003281949427_dropcol.resx">
+      <DependentUpon>202003281949427_dropcol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003311815492_ideaTable.resx">
+      <DependentUpon>202003311815492_ideaTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004051729002_superEvaluation.resx">
+      <DependentUpon>202004051729002_superEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004051846404_updatesForEvaluation.resx">
+      <DependentUpon>202004051846404_updatesForEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004060915426_addColumns.resx">
+      <DependentUpon>202004060915426_addColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004061339512_committee.resx">
+      <DependentUpon>202004061339512_committee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004061349146_commiteeEval.resx">
+      <DependentUpon>202004061349146_commiteeEval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004061747011_updatesforCommittee.resx">
+      <DependentUpon>202004061747011_updatesforCommittee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004061846252_stingToInt.resx">
+      <DependentUpon>202004061846252_stingToInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004071145220_updateDoubles.resx">
+      <DependentUpon>202004071145220_updateDoubles.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56379</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56379/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Packaging.Tools.1.0.0-preview1-25301-01\build\Microsoft.Packaging.Tools.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Packaging.Tools.1.0.0-preview1-25301-01\build\Microsoft.Packaging.Tools.targets'))" />
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.0-preview1-25301-01\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.0-preview1-25301-01\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Microsoft.Packaging.Tools.1.0.0-preview1-25301-01\build\Microsoft.Packaging.Tools.targets" Condition="Exists('..\packages\Microsoft.Packaging.Tools.1.0.0-preview1-25301-01\build\Microsoft.Packaging.Tools.targets')" />
+  <Import Project="..\packages\NETStandard.Library.2.0.0-preview1-25301-01\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.0-preview1-25301-01\build\netstandard2.0\NETStandard.Library.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

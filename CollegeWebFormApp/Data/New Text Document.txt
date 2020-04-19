@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .coloredGroud{
+        height: 150px;
+        background-color: black;
+    }
+    </style>
+</head>
+
+<body>
+
+    <input id="range" type="range" min="100" max="999" oninput=>
+
+    <div style="padding: 20px;">
+
+        <input id="coloreddiv" type="color" id="color">
+
+    </div>
+<div class="coloredGroud" id="coloredGroud">
+    colorground
+</div>
+
+    <script>
+        function colored(c) {
+            c = getElementById("coloreddiv");
+            document.getElementById("range").value = c.value;
+
+
+        }
+        var coloredDiv = document.getElementById("coloredGroud");
+        var colorInput = document.getElementById('coloreddiv');7
+        colorInput.onchange = function(){
+           coloredDiv.style.backgroundColor = colorInput.value;
+
+        }
+        var range = document.getElementById("range");
+        range.onchange = function(){
+            coloredDiv.style.backgroundColor = "#"+range.value;
+        }
+
+    </script>
+
+
+</body>
