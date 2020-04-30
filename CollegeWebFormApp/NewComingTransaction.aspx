@@ -54,6 +54,7 @@
                         <img alt="" class="auto-style8" src="logo/WhatsApp%20Image%202020-04-07%20at%209.31.13%20AM.jpeg" /></td>
                     <td class="auto-style3">
                                     <asp:Button ID="Button3" runat="server" BackColor="AliceBlue" CssClass="auto-style13" Height="41px" Text="Home Page" Width="126px" OnClick="Button3_Click" />
+                                    <asp:Button ID="Button6" runat="server" BackColor="AliceBlue" CssClass="auto-style14" Height="41px" Text="Incoming Transactions" Width="190px" OnClick="Button6_Click" />
                     </td>
                 </tr>
             </table>

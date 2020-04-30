@@ -38,6 +38,7 @@ namespace CollegeWebFormApp
                 {
                     Label1.Visible = true;
                     Label1.Text = "User name or Password are incorrect!";
+                    Response.Redirect("RegisterPageSupervisor.aspx");
                 }
                 else
                 {

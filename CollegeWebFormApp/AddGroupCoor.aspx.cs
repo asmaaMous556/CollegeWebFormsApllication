@@ -95,128 +95,128 @@ namespace CollegeWebFormApp
 
         private void fillStudent2()
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
-            SqlCommand command = new SqlCommand();
-            command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName2,'{DropDownList_groups.SelectedValue.ToString()}')";
-            //command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName1,'{DropDownList_groups.SelectedValue.ToString()}')";
+            //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
+            //SqlCommand command = new SqlCommand();
             //command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName2,'{DropDownList_groups.SelectedValue.ToString()}')";
+            ////command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName1,'{DropDownList_groups.SelectedValue.ToString()}')";
+            ////command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName2,'{DropDownList_groups.SelectedValue.ToString()}')";
 
-            command.Parameters.AddWithValue("@StudentName2", TextBox2.Text);
-            command.Connection = con;
+            //command.Parameters.AddWithValue("@StudentName2", TextBox2.Text);
+            //command.Connection = con;
 
 
-            try
-            {
-                con.Open();
-                command.ExecuteNonQuery();
+            //try
+            //{
+            //    con.Open();
+            //    command.ExecuteNonQuery();
 
-            }
+            //}
 
-            catch (Exception)
-            {
-                throw;
-            }
+            //catch (Exception)
+            //{
+            //    throw;
+            //}
 
-            finally
-            {
-                con.Close();
+            //finally
+            //{
+            //    con.Close();
 
-            }
+            //}
 
         }
 
         private void fillStudent1()
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
-            SqlCommand command = new SqlCommand();
-            command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName1,'{DropDownList_groups.SelectedValue.ToString()}')";
+            //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
+            //SqlCommand command = new SqlCommand();
             //command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName1,'{DropDownList_groups.SelectedValue.ToString()}')";
-            //command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName2,'{DropDownList_groups.SelectedValue.ToString()}')";
+            ////command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName1,'{DropDownList_groups.SelectedValue.ToString()}')";
+            ////command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName2,'{DropDownList_groups.SelectedValue.ToString()}')";
 
-            command.Parameters.AddWithValue("@StudentName1", TextBox1.Text);
-            command.Connection = con;
+            //command.Parameters.AddWithValue("@StudentName1", TextBox1.Text);
+            //command.Connection = con;
 
 
-            try
-            {
-                con.Open();
-                command.ExecuteNonQuery();
+            //try
+            //{
+            //    con.Open();
+            //    command.ExecuteNonQuery();
 
-            }
+            //}
 
-            catch (Exception)
-            {
-                throw;
-            }
+            //catch (Exception)
+            //{
+            //    throw;
+            //}
 
-            finally
-            {
-                con.Close();
+            //finally
+            //{
+            //    con.Close();
 
-            }
+            //}
         }
 
         private void fillsupertoDDl()
         {
 
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
-            SqlCommand command = new SqlCommand();
+           // SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
+           // SqlCommand command = new SqlCommand();
+           //// command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName,'{DropDownList_groups.SelectedValue.ToString()}')";
            // command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName,'{DropDownList_groups.SelectedValue.ToString()}')";
-            command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName,'{DropDownList_groups.SelectedValue.ToString()}')";
 
-            command.Parameters.AddWithValue("@StudentName", TextBox2.Text);
-            command.Connection = con;
+           // command.Parameters.AddWithValue("@StudentName", TextBox2.Text);
+           // command.Connection = con;
 
 
-            try
-            {
-                con.Open();
-                command.ExecuteNonQuery();
+           // try
+           // {
+           //     con.Open();
+           //     command.ExecuteNonQuery();
 
-            }
+           // }
 
-            catch (Exception)
-            {
-                throw;
-            }
+           // catch (Exception)
+           // {
+           //     throw;
+           // }
 
-            finally
-            {
-                con.Close();
+           // finally
+           // {
+           //     con.Close();
 
-            }
+           // }
 
         }
 
         private void fillGroupsToDDl()
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
-            SqlCommand command = new SqlCommand();
-            command.CommandText = $"select GroupId,GroupName from SupervisionGroups";
-            command.Connection = con;
+            //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
+            //SqlCommand command = new SqlCommand();
+            //command.CommandText = $"select GroupId,GroupName from SupervisionGroups";
+            //command.Connection = con;
 
-            try
-            {
-                con.Open();
+            //try
+            //{
+            //    con.Open();
 
-                SqlDataReader dr = command.ExecuteReader();
-                DropDownList_groups.DataSource = dr;
-                DropDownList_groups.DataTextField = "GroupName";
-                DropDownList_groups.DataValueField = "GroupId";
-                DropDownList_groups.DataBind();
+            //    SqlDataReader dr = command.ExecuteReader();
+            //    DropDownList_groups.DataSource = dr;
+            //    DropDownList_groups.DataTextField = "GroupName";
+            //    DropDownList_groups.DataValueField = "GroupId";
+            //    DropDownList_groups.DataBind();
 
 
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    throw;
+            //}
 
-            finally
-            {
-                con.Close();
+            //finally
+            //{
+            //    con.Close();
 
-            }
+            //}
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -253,37 +253,37 @@ namespace CollegeWebFormApp
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
-            SqlCommand command = new SqlCommand();
-            command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName3,'{DropDownList_groups.SelectedValue.ToString()}')";
+            //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
+            //SqlCommand command = new SqlCommand();
+            //command.CommandText = $"insert into Students (StudentName,GroupId) values(@StudentName3,'{DropDownList_groups.SelectedValue.ToString()}')";
            
-            command.Parameters.AddWithValue("@StudentName3", TextBox3.Text);
+            //command.Parameters.AddWithValue("@StudentName3", TextBox3.Text);
             
-            command.Connection = con;
+            //command.Connection = con;
 
 
-            try
-            {
-                con.Open();
-                command.ExecuteNonQuery();
+            //try
+            //{
+            //    con.Open();
+            //    command.ExecuteNonQuery();
 
-            }
+            //}
 
-            catch (Exception)
-            {
-                throw;
-            }
+            //catch (Exception)
+            //{
+            //    throw;
+            //}
 
-            finally
-            {
-                con.Close();
+            //finally
+            //{
+            //    con.Close();
 
-            }
+            //}
 
-            fillStudent1();
-            fillStudent2();
+            //fillStudent1();
+            //fillStudent2();
 
-            ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Saved!');", true);
+           
 
         }
 
@@ -291,6 +291,12 @@ namespace CollegeWebFormApp
         {
             insertGroupName();
             fillGroupsToDDl();
+            ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Saved!');", true);
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CoordinatorHomePage.aspx");
         }
     }
 }

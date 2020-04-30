@@ -20,20 +20,20 @@ namespace CollegeWebFormApp
         {
             if (IsPostBack == false)
             {
+                fillGroupsToDDl();
 
-               
-                if (Session["varStudentName"] != null)
-                {
-                    //Session['user_type'] == "stuent" ;
-                    var fn = Session["varStudentName"].ToString();
-                    var id = Convert.ToInt32(Session["id"]);
+                //if (Session["varStudentName"] != null)
+                //{
+                //Session['user_type'] == "stuent" ;
+               // var fn = Session["varStudentName"].ToString();
+                  //  var id = Convert.ToInt32(Session["id"]);
                   //  var Id =Session["Id"];
 
 
-                    Label1.Text = fn + " " ;
+                    //Label1.Text = fn + " " ;
                 }
 
-                fillGroupsToDDl();
+                
 
                 //else
                 //{
@@ -41,12 +41,40 @@ namespace CollegeWebFormApp
                 //    // response.redirect("registerationpagestudent.aspx");
                 //}
 
-            }
+            //}
         }
 
         private void fillGroupsToDDl()
         {
-           
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
+            SqlCommand command = new SqlCommand();
+            command.CommandText = $"select GroupId,GroupName from SupervisionGroups";
+            command.Connection = con;
+
+            try
+            {
+                con.Open();
+
+                SqlDataReader dr = command.ExecuteReader();
+                DropDownList1.DataSource = dr;
+                DropDownList1.DataTextField = "GroupName";
+                DropDownList1.DataValueField = "GroupId";
+                DropDownList1.DataBind();
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            finally
+            {
+                con.Close();
+
+            }
+
+
         }
 
         protected void TextBox2_TextChanged(object sender, EventArgs e)
@@ -57,47 +85,48 @@ namespace CollegeWebFormApp
         protected void Btn_send_Click(object sender, EventArgs e)
         {
 
-           var fn= Session["varStudentName"].ToString();
-            var id = Convert.ToInt32(Session["id"]);
+          // var fn= Session["varStudentName"].ToString();
+           // var id = Convert.ToInt32(Session["id"]);
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
             SqlCommand comman = new SqlCommand();
-            comman.CommandText = $"select COIS342 as 'database' , COIT374 as'network',email as'mail' ,ideaSelection,  COIT415 as'analysis', hour as'hour', Password as 'password',CellPhone as'phone 'from Students where (COIS342 is null or COIT374 is null or COIT415 is null or hour is null or Password is null and CellPhone is null and ideaSelection is null ) and StudentName ='{fn.ToString()}' and studentId='{id}';";
-            
-            comman.Connection = con; 
 
-
-
-
-            //
-
+            comman.CommandText = $"insert into Students (StudentName,GroupId,Email,COIS342,COIT374,COIT415, hour,Password,CellPhone) values (@StudentName,@GroupId,@Email,@COIS342,@COIT374,@COIT415,@hour,@Password,@CellPhone)";
             comman.Connection = con;
+            comman.Parameters.AddWithValue("@COIS342", TextBox_Database.Text);
+            comman.Parameters.AddWithValue("@COIT374", TextBox_Computer_network.Text);
+            comman.Parameters.AddWithValue("@COIT415", TextBox_DataAnalysis.Text);
+            comman.Parameters.AddWithValue("@hour", TextBox_Hours.Text);
+
+            comman.Parameters.AddWithValue("@StudentName", TextBox_name.Text);
+            comman.Parameters.AddWithValue("@email", TextBox_email.Text);
+            comman.Parameters.AddWithValue("@Password", TextBox_pass.Text);
+            comman.Parameters.AddWithValue("@GroupId", DropDownList1.SelectedValue.ToString());
+            comman.Parameters.AddWithValue("@CellPhone", TextBox_cellPhone.Text);
+
+
+            //  comman.CommandText = $"select COIS342 as 'database' , COIT374 as'network',email as'mail' ,ideaSelection as 'idea',  COIT415 as'analysis', hour as'hour', Password as 'password',CellPhone as'phone 'from Students where (COIS342 is null or COIT374 is null or COIT415 is null or hour is null or Password is null and CellPhone is null and ideaSelection is null ) and StudentName ='{fn.ToString()}' and studentId='{id}';";
+
+           
+
+           
             try
             {
                 con.Open();
+                comman.ExecuteNonQuery();
+                //object isExist = comman.ExecuteScalar();
 
-                object isExist = comman.ExecuteScalar();
 
-              
-                if (isExist.Equals(System.DBNull.Value) )
-                {
-                   
+                //if (isExist.Equals(System.DBNull.Value))
+                //{
 
-                    comman.CommandText = $"update students set COIS342=@COIS342,COIT374=@COIT374,COIT415=@COIT415,hour=@hour,email=@email,password=@password,cellPhone=@cellphone where StudentId='{id}';";
-                    comman.Parameters.AddWithValue("@COIS342", TextBox_Database.Text);
-                    comman.Parameters.AddWithValue("@COIT374", TextBox_Computer_network.Text);
-                    comman.Parameters.AddWithValue("@COIT415", TextBox_DataAnalysis.Text);
-                    comman.Parameters.AddWithValue("@hour", TextBox_Hours.Text);
 
-                    // comman.Parameters.AddWithValue("@name", TextBox_name.Text);
-                    comman.Parameters.AddWithValue("@email", TextBox_email.Text);
-                    comman.Parameters.AddWithValue("@password", TextBox_pass.Text);
-                   // comman.Parameters.AddWithValue("@GroupId", DropDownList1.SelectedValue.ToString());
-                    comman.Parameters.AddWithValue("@CellPhone", TextBox_cellPhone.Text);
 
-                    comman.ExecuteNonQuery();
+
+                    //  comman.ExecuteNonQuery();
                     Label3.Visible = true;
                     Label3.Text = "Your Process is Done!";
-                }
+               // }
+                //}
 
            
 
@@ -108,25 +137,27 @@ namespace CollegeWebFormApp
                 //}
 
             }
-            catch (Exception )
+            catch (Exception ex)
             {
                 Label2.Visible = true;
                 Label2.Text = "You've been registered before!";
 
 
-              //  Console.WriteLine("You've been registered before!", ex.Message);
+                Console.WriteLine("You've been registered before!", ex.Message);
             }
             finally
             {
                 con.Close();
             }
 
-           
+            // Response.Redirect("StudentHomePage.aspx");
+
+            ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Saved!');", true);
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ideaSelection.aspx");
+           // Response.Redirect("ideaSelection.aspx");
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -146,7 +177,7 @@ namespace CollegeWebFormApp
             //smtp.UseDefaultCredentials = true;
             //smtp.Send(msg);
 
-            Response.Redirect("ViewOutComigTransactionPage.aspx");
+          //  Response.Redirect("ViewOutComigTransactionPage.aspx");
         }
         //($"Hello student you an log in to your account using this id'{}' ",d);
 
@@ -172,7 +203,7 @@ namespace CollegeWebFormApp
 
         protected void Button2_Click1(object sender, EventArgs e)
         {
-            Response.Redirect("StudentHomePage.aspx");
+           // Response.Redirect("StudentHomePage.aspx");
         }
 
         protected void Button3_Click(object sender, EventArgs e)
@@ -182,12 +213,12 @@ namespace CollegeWebFormApp
 
         protected void Button10_Click(object sender, EventArgs e)
         {
-            Response.Redirect("IdeaPresentationPage.aspx");
+           // Response.Redirect("IdeaPresentationPage.aspx");
         }
 
         protected void Button6_Click(object sender, EventArgs e)
         {
-            Response.Redirect("StudentHomePage.aspx");
+           // Response.Redirect("StudentHomePage.aspx");
         }
     }
 }

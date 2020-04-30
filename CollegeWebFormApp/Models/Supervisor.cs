@@ -15,7 +15,8 @@ namespace CollegeWebFormApp.Models
         public string Email { get; set; }
         public string Department { get; set; }
 
-        public int GroupId { get; set; }
+       // public int GroupId { get; set; }
+        public string phone { get; set; }
 
 
 

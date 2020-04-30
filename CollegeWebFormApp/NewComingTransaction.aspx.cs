@@ -40,5 +40,10 @@ namespace CollegeWebFormApp
         {
             Response.Redirect("CommitteeEvaluationV2.aspx");
         }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("IncomingTransactionPageForsuper.aspx");
+        }
     }
 }

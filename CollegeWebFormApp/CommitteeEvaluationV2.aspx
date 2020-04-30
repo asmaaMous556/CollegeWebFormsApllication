@@ -323,6 +323,7 @@
                         <span class="auto-style92">التعليم العالي</span><br class="auto-style92" />
                         <span class="auto-style92">جامعة الملك عبد العزيز</span><br class="auto-style92" />
                         <span class="auto-style92">كلية الحاسبات وتقنية المعلومات برابغ</span><br class="auto-style92" />
+                        <br />
                         <br class="auto-style92" />
                         <br class="auto-style92" />
                         <br class="auto-style92" />

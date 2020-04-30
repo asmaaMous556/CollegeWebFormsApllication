@@ -15,14 +15,6 @@
         .auto-style4 {
             height: 91px;
         }
-        .auto-style6 {
-            height: 91px;
-            width: 423px;
-        }
-        .auto-style7 {
-            height: 115px;
-            width: 423px;
-        }
         .auto-style5 {
             margin-left: 6px;
             font-size: large;
@@ -34,23 +26,39 @@
         .auto-style9 {
             font-size: large;
         }
+        .auto-style10 {
+            height: 91px;
+            width: 445px;
+        }
+        .auto-style11 {
+            height: 115px;
+            width: 445px;
+        }
     </style>
 </head>
-<body style="height: 365px">
+<body style="height: 506px">
     <form id="form1" runat="server">
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style4">
+                    <td class="auto-style10">
                         <br />
                         <img alt="" class="auto-style8" src="logo/WhatsApp%20Image%202020-04-07%20at%209.31.13%20AM.jpeg" /><br />
                         <br />
-                        <span class="auto-style9">Reposotries :</span></td>
-                    <td class="auto-style6">
-                        &nbsp;</td>
-                    <td class="auto-style4"></td>
+                        <span class="auto-style9">Reposotries :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+                        &nbsp;
+                        </span></td>
+                    <td class="auto-style4">
+                        <span class="auto-style9">
+                        <asp:FileUpload ID="FileUpload1" runat="server" CssClass="auto-style9" />
+                        &nbsp;&nbsp;
+                        <asp:Button ID="Button1" runat="server" CssClass="auto-style9" OnClick="Button1_Click" style="height: 33px" Text="Upload" />
+                        </span></td>
+                    <td class="auto-style4">&nbsp;</td>
                 </tr>
                 <tr>
+                    <td class="auto-style11">
+                        &nbsp;</td>
                     <td class="auto-style3">
                         <asp:GridView ID="GridView1" runat="server" CssClass="auto-style5" Height="218px" Width="709px" AutoGenerateColumns="False">
                             <Columns>
@@ -65,8 +73,6 @@
                             </Columns>
                         </asp:GridView>
                     </td>
-                    <td class="auto-style7">
-                        &nbsp;</td>
                     <td class="auto-style3"></td>
                 </tr>
             </table>

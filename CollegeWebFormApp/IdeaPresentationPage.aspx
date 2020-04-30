@@ -178,7 +178,7 @@
             <br class="auto-style11" />
             <br class="auto-style11" />
             <br class="auto-style11" />
-            <asp:Button ID="Button1" runat="server" CssClass="auto-style10" Height="42px" OnClick="Button1_Click" Text="Save" Width="86px" />
+            <asp:Button ID="Button1" runat="server" CssClass="auto-style10" BackColor="AliceBlue" Height="42px" OnClick="Button1_Click" Text="Save" Width="86px" />
             <br class="auto-style11" />
         </div>
     </form>

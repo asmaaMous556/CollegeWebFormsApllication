@@ -206,14 +206,14 @@
                 <tr>
                     <td class="auto-style14">Comment</td>
                     <td>
-                        <asp:TextBox ID="TextBox_comment" runat="server" TextMode="MultiLine" Height="47px" Width="253px" CssClass="auto-style14"></asp:TextBox>
+                        <asp:TextBox ID="TextBox_comment" runat="server" TextMode="MultiLine" Height="78px" Width="313px" CssClass="auto-style14"></asp:TextBox>
                     </td>
                     <td class="auto-style14">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style14">&nbsp;</td>
                     <td>
-                        <asp:Button ID="Button2" runat="server" Height="42px" Text="Send" Width="73px" OnClick="Button2_Click" CssClass="auto-style14" />
+                        <asp:Button ID="Button2" runat="server" BackColor="AliceBlue" Height="42px" Text="Send" Width="73px" OnClick="Button2_Click" CssClass="auto-style14" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>

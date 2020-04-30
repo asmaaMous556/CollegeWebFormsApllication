@@ -15,10 +15,10 @@
         }
         .auto-style7 {
             height: 60px;
-            width: 548px;
+            width: 460px;
         }
         .auto-style12 {
-            width: 548px;
+            width: 460px;
             font-size: large;
         }
         .auto-style13 {
@@ -35,21 +35,21 @@
         }
         .auto-style18 {
             height: 78px;
-            width: 548px;
+            width: 460px;
         }
         .auto-style19 {
             height: 78px;
         }
         .auto-style20 {
             height: 82px;
-            width: 548px;
+            width: 460px;
         }
         .auto-style21 {
             height: 82px;
         }
         .auto-style22 {
             height: 104px;
-            width: 548px;
+            width: 460px;
         }
         .auto-style23 {
             height: 104px;
@@ -80,7 +80,7 @@
         }
         .auto-style34 {
             height: 87px;
-            width: 548px;
+            width: 460px;
         }
         .auto-style35 {
             height: 87px;
@@ -96,7 +96,7 @@
         }
         .auto-style38 {
             height: 49px;
-            width: 548px;
+            width: 460px;
             font-size: large;
         }
         .auto-style39 {
@@ -117,7 +117,7 @@
                         <br />
                         <img alt="" class="auto-style33" src="logo/WhatsApp%20Image%202020-04-07%20at%209.31.13%20AM.jpeg" /></td>
                     <td class="auto-style24">
-                        <asp:Button ID="Button2" runat="server" CssClass="auto-style39" Height="40px" BackColor="AliceBlue" OnClick="Button2_Click" Text="Log In  Page" Width="152px" />
+                        <asp:Button ID="Button2" runat="server" CssClass="auto-style39" Height="40px" BackColor="AliceBlue" OnClick="Button2_Click" Text="Log In  Page" Width="147px" />
                     </td>
                     <td class="auto-style2">
                         &nbsp;</td>

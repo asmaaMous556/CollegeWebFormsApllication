@@ -11,11 +11,11 @@
         }
         .auto-style8 {
             height: 192px;
-            width: 319px;
+            width: 285px;
         }
         .auto-style15 {
             height: 192px;
-            width: 425px;
+            width: 345px;
             font-size: large;
         }
         .auto-style14 {
@@ -25,13 +25,13 @@
         }
         .auto-style21 {
             height: 77px;
-            width: 319px;
+            width: 285px;
             font-size: large;
             background-color: #F0F8FF;
         }
         .auto-style22 {
             height: 77px;
-            width: 425px;
+            width: 345px;
             background-color: #F0F8FF;
         }
         .auto-style23 {
@@ -39,13 +39,13 @@
         }
         .auto-style24 {
             height: 70px;
-            width: 319px;
+            width: 285px;
             font-size: large;
             background-color: #F0F8FF;
         }
         .auto-style25 {
             height: 70px;
-            width: 425px;
+            width: 345px;
             background-color: #F0F8FF;
         }
         .auto-style26 {
@@ -53,13 +53,13 @@
         }
         .auto-style27 {
             height: 88px;
-            width: 319px;
+            width: 285px;
             font-size: large;
             background-color: #F0F8FF;
         }
         .auto-style28 {
             height: 88px;
-            width: 425px;
+            width: 345px;
             background-color: #F0F8FF;
         }
         .auto-style29 {
@@ -67,12 +67,12 @@
         }
         .auto-style30 {
             height: 84px;
-            width: 319px;
+            width: 285px;
             background-color: #F0F8FF;
         }
         .auto-style31 {
             height: 84px;
-            width: 425px;
+            width: 345px;
             background-color: #F0F8FF;
         }
         .auto-style32 {
@@ -96,7 +96,17 @@
             <tr>
                 <td class="auto-style8">
                     <img alt="" class="auto-style35" src="logo/WhatsApp%20Image%202020-04-07%20at%209.31.13%20AM.jpeg" /></td>
-                <td class="auto-style15">Supervisor&#39;s Registeration Page</td>
+                <td class="auto-style15">Supervisor&#39;s Registeration Page<br />
+                    <br />
+                    If you want to log into the system and be a supervisor, you should register your information
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </td>
                 <td class="auto-style34"></td>
             </tr>
             <tr>
@@ -119,6 +129,20 @@
                     <asp:TextBox ID="TextBox_email" runat="server" CssClass="auto-style33"></asp:TextBox>
                 </td>
                 <td class="auto-style29"></td>
+            </tr>
+            <tr>
+                <td class="auto-style27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Phone Number</td>
+                <td class="auto-style28">
+                    <asp:TextBox ID="TextBox_Phone" runat="server" CssClass="auto-style33"></asp:TextBox>
+                </td>
+                <td class="auto-style29">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Department</td>
+                <td class="auto-style28">
+                    <asp:TextBox ID="TextBox_dept" runat="server" CssClass="auto-style33"></asp:TextBox>
+                </td>
+                <td class="auto-style29">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style30"></td>

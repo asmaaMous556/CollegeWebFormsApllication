@@ -20,13 +20,15 @@ namespace CollegeWebFormApp
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CollegeModel"].ConnectionString);
             SqlCommand comman = new SqlCommand();
-            comman.CommandText = $"insert into supervisors( SupervisorName, Email,Password) values(@name,@email, @password)";
-
+            comman.CommandText = $"  insert into supervisors( SupervisorName, Email,Password,Department,phone) values(@name,@email, @password,@Department,@phone)";
            // comman.Parameters.AddWithValue("@id", TextBox_id.Text);
             comman.Parameters.AddWithValue("@name", TextBox_name.Text);
             comman.Parameters.AddWithValue("@email", TextBox_email.Text);
             comman.Parameters.AddWithValue("@password", TextBox_pass.Text);
-            
+            comman.Parameters.AddWithValue("@Department", TextBox_dept.Text);
+            comman.Parameters.AddWithValue("@phone", TextBox_Phone.Text);
+
+
 
             comman.Connection = con;
 
@@ -51,7 +53,8 @@ namespace CollegeWebFormApp
                 con.Close();
             }
 
-            Response.Redirect("SupervisorHomePage.aspx");
+            // Response.Redirect("SupervisorHomePage.aspx");
+            ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Saved!');", true);
         }
     }
 }

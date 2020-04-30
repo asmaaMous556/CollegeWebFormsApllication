@@ -106,7 +106,7 @@
                 <td class="auto-style21">
                     <img alt="" class="auto-style20" src="logo/WhatsApp%20Image%202020-04-07%20at%209.31.13%20AM.jpeg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style18">
                     <asp:Button ID="Button3" runat="server" BackColor="AliceBlue" CssClass="auto-style18" Height="40px" Text="Home Page" Width="117px" OnClick="Button4_Click" />
-                    &nbsp;<asp:Button ID="Button4" runat="server" BackColor="AliceBlue" CssClass="auto-style30" Height="40px" Text="Out Coming Transaction" Width="211px" OnClick="Button3_Click" />
+                    &nbsp;<asp:Button ID="Button4" runat="server" BackColor="AliceBlue" CssClass="auto-style30" Height="40px" Text="Prevoius Page" Width="167px" OnClick="Button3_Click" />
                     </span>
                     </td>
                 <td class="auto-style19">

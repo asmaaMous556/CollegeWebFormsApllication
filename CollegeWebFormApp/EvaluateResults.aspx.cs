@@ -205,7 +205,7 @@ namespace CollegeWebFormApp
             {
                 con.Close();
             }
-
+            ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Saved!');", true);
         }
 
         protected void Button2_Click(object sender, EventArgs e)

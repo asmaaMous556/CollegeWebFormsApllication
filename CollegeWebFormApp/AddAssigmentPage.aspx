@@ -150,7 +150,7 @@
                     Date:</td>
                 <td class="auto-style49">&nbsp;<asp:TextBox ID="TextBox_date" runat="server" Enabled="False" CssClass="auto-style57"></asp:TextBox>
                     &nbsp;&nbsp;
-                    <asp:Button ID="Button1" runat="server" Height="32px" Text="Choose Date" Width="127px" CssClass="auto-style32" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" runat="server" Height="32px" BackColor="AliceBlue" Text="Choose Date" Width="127px" CssClass="auto-style32" OnClick="Button1_Click" />
                     <span class="auto-style57">&nbsp;</span></td>
                 <td class="auto-style39">
                     <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" Width="220px" OnSelectionChanged="Calendar1_SelectionChanged" Visible="False">
@@ -213,7 +213,7 @@
             <tr>
                 <td class="auto-style46">&nbsp;</td>
                 <td class="auto-style52">
-                    <asp:Button ID="Button2" runat="server" CssClass="auto-style10" Height="37px" OnClick="Upload" Text="Save" Width="92px" />
+                    <asp:Button ID="Button2" runat="server" BackColor="AliceBlue" CssClass="auto-style10" Height="37px" OnClick="Upload" Text="Save" Width="92px" />
                 </td>
                 <td class="auto-style57">&nbsp;</td>
             </tr>

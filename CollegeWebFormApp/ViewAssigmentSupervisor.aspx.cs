@@ -188,7 +188,9 @@ namespace CollegeWebFormApp
 
 
                 }
+               
             }
+            ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Sent!');", true);
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)

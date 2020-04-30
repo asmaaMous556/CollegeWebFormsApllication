@@ -150,7 +150,6 @@
                     <br />
                     <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Upload" CssClass="btn-primary" Height="49px" Width="117px" style="margin-left: 134px; font-size: large;"    />
                     <br />
                     <br />
                     <br />
@@ -171,6 +170,8 @@
                     <br />
                 </td>
                 <td class="auto-style47">
+                    <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Upload" CssClass="btn-primary"  Height="49px" Width="117px"  BackColor="AliceBlue" style="margin-left: 20px; font-size: large;"    />
+                    <br />
                     <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" Width="271px" CssClass="auto-style32" Height="196px" Visible="False">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>

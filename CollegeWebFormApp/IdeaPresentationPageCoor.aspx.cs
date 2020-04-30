@@ -77,6 +77,7 @@ namespace CollegeWebFormApp
                     TextBox_groupId.Text = dr.GetValue(6).ToString();
                     TextBox_super.Text = dr.GetValue(7).ToString();
                     TextBox_id.Text = dr.GetValue(8).ToString();
+                    TextBox_signature.Text = dr.GetValue(0).ToString();
 
 
 

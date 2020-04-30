@@ -139,6 +139,7 @@
     <Content Include="CoordinatorLoginPage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="ManageSeniorProjects.aspx" />
+    <Content Include="ManageTransactionCoorSuper.aspx" />
     <Content Include="ManageTransactionPageCommittee.aspx" />
     <Content Include="ManageTransactionPageCoordinator.aspx" />
     <Content Include="ManageTransactionPageForSup.aspx" />
@@ -148,6 +149,7 @@
     <Content Include="PreviousProject.aspx" />
     <Content Include="ProposedIdeaCoordinator.aspx" />
     <Content Include="Repository.aspx" />
+    <Content Include="RoutingForFillregisteration.aspx" />
     <Content Include="StudentGuidelines.aspx" />
     <Content Include="StudentLoginPage.aspx" />
     <Content Include="StudentManageTransaction.aspx" />
@@ -490,6 +492,13 @@
     <Compile Include="ManageSeniorProjects.aspx.designer.cs">
       <DependentUpon>ManageSeniorProjects.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ManageTransactionCoorSuper.aspx.cs">
+      <DependentUpon>ManageTransactionCoorSuper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageTransactionCoorSuper.aspx.designer.cs">
+      <DependentUpon>ManageTransactionCoorSuper.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ManageTransactionPageCommittee.aspx.cs">
       <DependentUpon>ManageTransactionPageCommittee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -634,6 +643,14 @@
     <Compile Include="Migrations\202004071145220_updateDoubles.designer.cs">
       <DependentUpon>202004071145220_updateDoubles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004141720554_superUpdate.cs" />
+    <Compile Include="Migrations\202004141720554_superUpdate.designer.cs">
+      <DependentUpon>202004141720554_superUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004141844157_super.cs" />
+    <Compile Include="Migrations\202004141844157_super.designer.cs">
+      <DependentUpon>202004141844157_super.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\CommitteEvaluation.cs" />
     <Compile Include="Models\CommitteTransaction.cs" />
     <Compile Include="Models\CurrentProject.cs" />
@@ -675,6 +692,13 @@
     </Compile>
     <Compile Include="Repository.aspx.designer.cs">
       <DependentUpon>Repository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoutingForFillregisteration.aspx.cs">
+      <DependentUpon>RoutingForFillregisteration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoutingForFillregisteration.aspx.designer.cs">
+      <DependentUpon>RoutingForFillregisteration.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentGuidelines.aspx.cs">
       <DependentUpon>StudentGuidelines.aspx</DependentUpon>
@@ -1008,6 +1032,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004071145220_updateDoubles.resx">
       <DependentUpon>202004071145220_updateDoubles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004141720554_superUpdate.resx">
+      <DependentUpon>202004141720554_superUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004141844157_super.resx">
+      <DependentUpon>202004141844157_super.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

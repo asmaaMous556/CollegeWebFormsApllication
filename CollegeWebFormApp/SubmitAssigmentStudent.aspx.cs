@@ -138,7 +138,7 @@ namespace CollegeWebFormApp
 
                             cmd.Connection = con;
                             cmd.Parameters.AddWithValue("@File_name", FileName);
-                            cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString());
+                            cmd.Parameters.AddWithValue("@date", DateTime.Now);
                             cmd.Parameters.AddWithValue("@ContentType", fileContent);
                             cmd.Parameters.AddWithValue("@UploadedfileByStudent", bytes);
                             cmd.Parameters.AddWithValue("@Supervisor_SupervisorId", DropDownList_supervisor.SelectedValue.ToString());

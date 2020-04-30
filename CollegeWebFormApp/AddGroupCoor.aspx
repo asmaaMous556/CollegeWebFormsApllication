@@ -83,6 +83,11 @@
             height: 52px;
             font-size: large;
         }
+        .auto-style25 {
+            height: 50px;
+            width: 163px;
+            font-size: large;
+        }
     </style>
 </head>
 <body style="height: 511px">
@@ -93,7 +98,9 @@
                     <td class="auto-style16">
                         <img alt="" class="auto-style20" src="logo/WhatsApp%20Image%202020-04-07%20at%209.31.13%20AM.jpeg" /></td>
                     <td class="auto-style12">
-                        &nbsp;</td>
+                        
+                    <asp:Button ID="Button3" runat="server" BackColor="AliceBlue" CssClass="auto-style25" Height="40px" Text="Home Page" Width="117px" OnClick="Button3_Click" />
+                    </td>
                     <td class="auto-style6">
                         &nbsp;</td>
                 </tr>
@@ -119,9 +126,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style22">All Groups Names</td>
+                    <td class="auto-style22" hidden="hidden">All Groups Names</td>
                     <td class="auto-style12">
-                        <asp:DropDownList ID="DropDownList_groups" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" CssClass="auto-style21" AutoPostBack="True">
+                        <asp:DropDownList ID="DropDownList_groups" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" CssClass="auto-style21" AutoPostBack="True" Visible="False">
                         </asp:DropDownList>
                     </td>
                     <td class="auto-style6">
@@ -134,22 +141,22 @@
                     <td class="auto-style7"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style18">Type Names Of Students</td>
+                    <td class="auto-style18" hidden="hidden">Type Names Of Students</td>
                     <td class="auto-style14">
-                        <asp:TextBox ID="TextBox1" runat="server" Height="37px" Width="178px" CssClass="auto-style21"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" Height="37px" Width="178px" CssClass="auto-style21" Visible="False"></asp:TextBox>
                     </td>
                     <td class="auto-style4">
-                        <asp:TextBox ID="TextBox2" runat="server" Height="37px" Width="178px" CssClass="auto-style21"></asp:TextBox>
+                        <asp:TextBox ID="TextBox2" runat="server" Height="37px" Width="178px" CssClass="auto-style21" Visible="False"></asp:TextBox>
                         <span class="auto-style21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </span>
-                        <asp:TextBox ID="TextBox3" runat="server" Height="37px" Width="178px" CssClass="auto-style21"></asp:TextBox>
+                        <asp:TextBox ID="TextBox3" runat="server" Height="37px" Width="178px" CssClass="auto-style21" Visible="False"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style19"></td>
                     <td class="auto-style15">&nbsp;</td>
                     <td class="auto-style3">
-                        <asp:Button ID="Button1" BackColor="AliceBlue" runat="server" Height="40px" OnClick="Button1_Click" Text="Save" Width="76px" CssClass="auto-style21" />
+                        <asp:Button ID="Button1" BackColor="AliceBlue" runat="server" Height="40px" OnClick="Button1_Click" Text="Save" Width="76px" CssClass="auto-style21" Visible="False" />
                     </td>
                 </tr>
             </table>

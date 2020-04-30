@@ -98,7 +98,7 @@ namespace CollegeWebFormApp
                             cmd.Connection = con;
                             cmd.Parameters.AddWithValue("@TaskTitle", TextBox_title.Text);
                             cmd.Parameters.AddWithValue("@comment", TextBox_comment.Text);
-                            cmd.Parameters.AddWithValue("@durationDate", TextBox_date.Text);
+                            cmd.Parameters.AddWithValue("@durationDate",DateTime.Parse(TextBox_date.Text));
                             cmd.Parameters.AddWithValue("@SupervisorId", IdForSupervisor);
 
                             cmd.Parameters.AddWithValue("@AgssigmentName", FileName);

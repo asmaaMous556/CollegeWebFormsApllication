@@ -29,7 +29,7 @@ namespace CollegeWebFormApp
             SqlCommand command = new SqlCommand();
             command.CommandText = $"insert into CommitteTransactions (StudentId,SupervisorId,dateOfTransaction) values (@StudentId,@SupervisorId,@dateOfTransaction)";
 
-            command.Parameters.AddWithValue("@dateOfTransaction", DateTime.Now.ToString());
+            command.Parameters.AddWithValue("@dateOfTransaction", DateTime.Now);
             command.Parameters.AddWithValue("@SupervisorId", IdForSupervisor);
             command.Parameters.AddWithValue("@StudentId", DropDownList1.SelectedValue.ToString());
 
@@ -142,6 +142,7 @@ namespace CollegeWebFormApp
             {
                 con.Open();
                 TextBox64.Text = (grade).ToString();
+                TextBox67.Text = ((grade) * 0.6).ToString();
 
 
                 command.ExecuteNonQuery();
@@ -161,6 +162,7 @@ namespace CollegeWebFormApp
             finally
             {
                 con.Close();
+                ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Saved!');", true);
             }
 
         }

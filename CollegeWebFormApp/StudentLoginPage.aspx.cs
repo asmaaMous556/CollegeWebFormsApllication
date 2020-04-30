@@ -59,6 +59,7 @@ namespace CollegeWebFormApp
                 {
                     Label1.Visible = true;
                     Label1.Text = "User name or ID is incorrect!";
+                    Response.Redirect("FillRegisteration.aspx"); 
 
                 }
                 else
@@ -68,7 +69,7 @@ namespace CollegeWebFormApp
                     Session["id"] = TextBox_Id.Text;
                     Session.Add("varStudentName", TextBox_name.Text);
                     
-                    Response.Redirect("FillRegisteration.aspx");
+                    Response.Redirect("StudentHomePage.aspx");
                     
                 }
 

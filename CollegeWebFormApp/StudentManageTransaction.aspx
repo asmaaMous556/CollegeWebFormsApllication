@@ -92,7 +92,7 @@
                         &nbsp;</p>
                 </td>
                 <td class="auto-style18">
-                    <h4 class="auto-style20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New Transactions&nbsp;</h4>
+                    <h4 class="auto-style20" hidden="hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New Transactions&nbsp;</h4>
                 </td>
                 <td class="auto-style13">
                     <h4 class="auto-style20">Out-coming Transactions</h4>
@@ -106,7 +106,7 @@
                 <td class="auto-style19">
                     <br />
                     <br />
-                    <asp:Button ID="Btn_fill" BackColor="AliceBlue" runat="server" CssClass="auto-style14" OnClick="Button3_Click" Text="Fill Registeration" Width="217px" Height="48px" />
+                    <asp:Button ID="Btn_fill" BackColor="AliceBlue" runat="server" CssClass="auto-style14" OnClick="Button3_Click" Text="Fill Registeration" Width="217px" Height="48px" Visible="False" />
                     <span class="auto-style20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
                 <td class="auto-style2">

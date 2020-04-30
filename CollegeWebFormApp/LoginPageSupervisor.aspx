@@ -97,12 +97,12 @@
                     <asp:Label ID="Label1" runat="server" ForeColor="Red" Text="Label" Visible="False" CssClass="auto-style12"></asp:Label>
                 </td>
                 <td class="auto-style4">
-                    <asp:Button ID="Button1" runat="server" CssClass="auto-style11" Height="37px" OnClick="Button1_Click" Text="Log in" Width="87px" />
+                    <asp:Button ID="Button1" runat="server" BackColor="AliceBlue" CssClass="auto-style11" Height="37px" OnClick="Button1_Click" Text="Log in" Width="87px" />
                     <br class="auto-style12" />
                     <br class="auto-style12" />
                     <br class="auto-style12" />
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/RegisterPageSupervisor.aspx" CssClass="auto-style12">Register here</asp:HyperLink>
-                    <span class="auto-style12">&nbsp;if you&#39;re not registered !</span><br class="auto-style12" />
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/RegisterPageSupervisor.aspx" CssClass="auto-style12" Visible="False">Register here</asp:HyperLink>
+                    <span class="auto-style12">&nbsp;</span><br class="auto-style12" />
                 </td>
             </tr>
         </table>

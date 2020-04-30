@@ -180,6 +180,10 @@
             font-size: large;
             margin-top: 8px;
         }
+        .auto-style93 {
+            font-size: large;
+            margin-left: 302px;
+        }
         </style>
 </head> 
 
@@ -195,9 +199,9 @@
                     <br />
                     <br />
                     <br />
-                                    <asp:Button ID="Button4" runat="server" BackColor="AliceBlue" CssClass="auto-style50" Height="43px" Text="Out Coming Transaction" Width="207px" OnClick="Button2_Click" />
-                                    <asp:Button ID="Button5" runat="server" BackColor="AliceBlue" CssClass="auto-style50" Height="43px" Text="In Coming Transaction" Width="209px" OnClick="Button10_Click" />
-                    <asp:Button ID="Button6" runat="server" BackColor="AliceBlue" CssClass="auto-style92" Height="41px" Text="Home Page" Width="126px" OnClick="Button6_Click" />
+                                    <asp:Button ID="Button4" runat="server" BackColor="AliceBlue" CssClass="auto-style50" Height="43px" Text="Out Coming Transaction" Width="207px" OnClick="Button2_Click" Visible="False" />
+                                    <asp:Button ID="Button5" runat="server" BackColor="AliceBlue" CssClass="auto-style50" Height="43px" Text="In Coming Transaction" Width="209px" OnClick="Button10_Click" Visible="False" />
+                    <asp:Button ID="Button6" runat="server" BackColor="AliceBlue" CssClass="auto-style92" Height="41px" Text="Home Page" Width="126px" OnClick="Button6_Click" Visible="False" />
                                     <br />
                     <br />
                     <br />
@@ -221,16 +225,16 @@
                 <td class="auto-style8"></td>
             </tr>
             <tr>
-                <td class="auto-style12"><span class="auto-style38">Student Name :
-                    </span>
-                    <asp:Label ID="Label1" runat="server" Text="Label" CssClass="auto-style38"></asp:Label>
+                <td class="auto-style12"><span class="auto-style38">&nbsp;</span><asp:Label ID="Label1" runat="server" Text="Label" CssClass="auto-style38" Visible="False"></asp:Label>
                 </td>
                 <td class="auto-style32">Eligibility of the student for taking senior project 1(COIT498)</td>
                 <td class="auto-style7"></td>
             </tr>
             <tr>
                 <td class="auto-style13">
-                    <br class="auto-style38" />
+                    <br />
+                    <br />
+                    Group Name<br class="auto-style38" />
                     <br class="auto-style38" />
                     <table class="auto-style23">
                         <tr>
@@ -254,7 +258,9 @@
                     <table class="auto-style23">
                         <tr>
                             <td class="auto-style29">
-                                <asp:Button ID="Button2" runat="server" Height="46px" OnClick="Button2_Click1" Text="I had registerd before!" Width="228px" CssClass="auto-style38" />
+                                <asp:DropDownList ID="DropDownList1" runat="server">
+                                </asp:DropDownList>
+                                <asp:Button ID="Button2" runat="server" Height="46px" OnClick="Button2_Click1" BackColor="AliceBlue" Text="I had registerd before!" Width="228px" CssClass="auto-style93" Visible="False" />
                             </td>
                         </tr>
                         <tr>
@@ -314,7 +320,7 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style19">
-                    <asp:Button ID="Btn_send" runat="server" CssClass="auto-style20" OnClick="Btn_send_Click" Text="Save" Width="98px" />
+                    <asp:Button ID="Btn_send" runat="server" BackColor="AliceBlue" CssClass="auto-style20" OnClick="Btn_send_Click" Text="Save" Width="98px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style38"> </span>
                     <asp:Label ID="Label2" runat="server" ForeColor="Red" Text="Label" Visible="False" CssClass="auto-style38"></asp:Label>
                     <span class="auto-style38">&nbsp;
